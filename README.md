@@ -1,1 +1,5 @@
 # fotogram
+
+##Tech Stack
+
+- firebase
