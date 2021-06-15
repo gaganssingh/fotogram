@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import FirebaseContext from "../context/firebase";
+import * as ROUTES from "../constants/routes";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 
@@ -21,7 +22,17 @@ const Login = () => {
   const emailChangeHandler = (e) => setEmailAddress(e.target.value);
   const passwordChangeHandler = (e) => setPassword(e.target.value);
 
-  const handleLogin = () => {};
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await firebase.auth().signInWithEmailAndPassword(emailAddress, password);
+      history.push(ROUTES.DASHBOARD);
+    } catch (error) {
+      setEmailAddress("");
+      setPassword("");
+      setError(error.message);
+    }
+  };
 
   useEffect(() => {
     document.title = "Login | fotogram";
@@ -48,7 +59,7 @@ const Login = () => {
 
           <form onSubmit={handleLogin} method="POST">
             <Input
-              type="text"
+              type="email"
               ariaLabel="Enter your email address"
               placeholder="Email Address"
               customClasses="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
