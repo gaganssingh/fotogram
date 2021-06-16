@@ -18,8 +18,8 @@ const Signup = () => {
   const [error, setError] = useState("");
 
   // FORM VALIDATION RULES
-  const isUsernameValid = username.trim().length > 3;
-  const isFullNameValid = fullName.trim().length > 3;
+  const isUsernameValid = username.trim().length >= 1;
+  const isFullNameValid = fullName.trim().length >= 1;
   const isEmailValid = emailAddress.includes("@");
   const ispasswordValid = password.length >= 6;
   const isInvalid =
