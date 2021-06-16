@@ -60,9 +60,11 @@ const Login = () => {
           <form onSubmit={handleLogin} method="POST">
             <Input
               type="email"
+              focusOnPageLoad={true}
               ariaLabel="Enter your email address"
               placeholder="Email Address"
               customClasses="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
+              value={emailAddress}
               onChange={emailChangeHandler}
             />
             <Input
@@ -70,6 +72,7 @@ const Login = () => {
               ariaLabel="Enter your password"
               placeholder="Password"
               customClasses="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
+              value={password}
               onChange={passwordChangeHandler}
             />
             <Button
@@ -83,8 +86,8 @@ const Login = () => {
         </div>
         <div className="flex justify-center items-center flex-col w-full  bg-white rounded p-4 border border-gray-primary">
           <p className="text-sm">Don't have an account? </p>
-          <Link to="/signup" className="font-bold text-blue-medium">
-            Sign up
+          <Link to={ROUTES.SIGN_UP} className="font-bold text-blue-medium">
+            Sign Up
           </Link>
         </div>
       </div>
