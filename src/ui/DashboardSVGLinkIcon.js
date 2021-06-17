@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import * as ROUTES from "../constants/routes";
 
-const DashboardSVGButton = () => {
+const DashboardSVGLinkIcon = () => {
   return (
     <Link to={ROUTES.DASHBOARD} aria-label="Dashboard">
       <svg
@@ -22,4 +22,4 @@ const DashboardSVGButton = () => {
   );
 };
 
-export default DashboardSVGButton;
+export default DashboardSVGLinkIcon;

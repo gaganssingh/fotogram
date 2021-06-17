@@ -1,6 +1,6 @@
 import React from "react";
 
-const SignoutSVGButton = ({ onClick }) => {
+const SignoutSVGLinkIcon = ({ onClick }) => {
   return (
     <button type="button" title="Sign Out" onClick={onClick}>
       <svg
@@ -21,4 +21,4 @@ const SignoutSVGButton = ({ onClick }) => {
   );
 };
 
-export default SignoutSVGButton;
+export default SignoutSVGLinkIcon;

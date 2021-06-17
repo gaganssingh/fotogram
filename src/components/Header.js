@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import FirebaseContext from "../context/firebase";
 import UserContext from "../context/user";
 import * as ROUTES from "../constants/routes";
-import DashboardSVGButton from "../ui/DashboardSVGButton";
-import SignoutSVGButton from "../ui/SignoutSVGButton";
+import DashboardSVGLinkIcon from "../ui/DashboardSVGLinkIcon";
+import SignoutSVGLinkIcon from "../ui/SignoutSVGLinkIcon";
 import Button from "../ui/Button";
 import UserAvatar from "../ui/UserAvatar";
 
@@ -33,8 +33,8 @@ const Header = () => {
             {user ? (
               <>
                 {/* If user is logged in then show these */}
-                <DashboardSVGButton />
-                <SignoutSVGButton onClick={userSignoutHandler} />
+                <DashboardSVGLinkIcon />
+                <SignoutSVGLinkIcon onClick={userSignoutHandler} />
                 <UserAvatar user={user} />
               </>
             ) : (
