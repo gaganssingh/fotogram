@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 
-const User = ({ username = "test", fullName = "Test Name" }) => {
-  console.log(`username, fullName`, username, fullName);
+const User = ({ username, fullName }) => {
   return !username || !fullName ? (
     <Skeleton count={1} height={61} />
   ) : (

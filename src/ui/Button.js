@@ -1,5 +1,16 @@
-const Button = ({ customClasses, children, disabled = false, type }) => (
-  <button type={type} disabled={disabled} className={customClasses}>
+const Button = ({
+  type,
+  customClasses,
+  children,
+  disabled = false,
+  onClick = () => {},
+}) => (
+  <button
+    type={type}
+    disabled={disabled}
+    className={customClasses}
+    onClick={onClick}
+  >
     {children}
   </button>
 );

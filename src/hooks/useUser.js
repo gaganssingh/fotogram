@@ -9,7 +9,7 @@ const useUser = () => {
   useEffect(() => {
     const getUserObjByUserId = async () => {
       // Using the user id get user information from the firebase service
-      const response = await getUserByUserId(user.uid);
+      const [response] = await getUserByUserId(user.uid);
       setActiveUser(response);
     };
     if (user?.uid) {
