@@ -5,6 +5,7 @@ import UserContext from "../context/user";
 import * as ROUTES from "../constants/routes";
 import DashboardSVGButton from "../ui/DashboardSVGButton";
 import SignoutSVGButton from "../ui/SignoutSVGButton";
+import Button from "../ui/Button";
 import UserAvatar from "../ui/UserAvatar";
 
 const Header = () => {
@@ -40,20 +41,20 @@ const Header = () => {
               <>
                 {/* If user is not logged-in, then show these */}
                 <Link to={ROUTES.LOGIN}>
-                  <button
+                  <Button
                     type="button"
-                    className="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8"
+                    customClasses="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8"
                   >
                     Log In
-                  </button>
+                  </Button>
                 </Link>
                 <Link to={ROUTES.SIGN_UP}>
-                  <button
+                  <Button
                     type="button"
-                    className="font-bold text-sm rounded text-blue-medium w-20 h-8"
+                    customClasses="font-bold text-sm rounded text-blue-medium w-20 h-8"
                   >
                     Sign Up
-                  </button>
+                  </Button>
                 </Link>
               </>
             )}

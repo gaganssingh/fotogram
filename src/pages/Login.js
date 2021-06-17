@@ -78,7 +78,9 @@ const Login = () => {
             <Button
               disabled={isInvalid}
               type="submit"
-              customClasses={`${isInvalid && "opacity-50"}`}
+              customClasses={`bg-blue-medium text-white w-full rounded h-8 font-bold ${
+                isInvalid && "opacity-50"
+              }`}
             >
               Login
             </Button>
